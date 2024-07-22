@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FDM Shared
+Bundle-SymbolicName: com.karakun.shared
+Bundle-Version: 24.6.0.qualifier
+Bundle-Vendor: EXOKNOX
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Automatic-Module-Name: com.karakun.shared

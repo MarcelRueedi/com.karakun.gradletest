@@ -1,0 +1,34 @@
+plugins {
+    id "com.gorylenko.gradle-git-properties" version "2.4.2"
+}
+
+description = 'FDM Shared'
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'maven-publish'
+
+dependencies {
+    // The production code uses the SLF4J logging API at implementation time
+    implementation "org.slf4j:slf4j-api:${slf4jVersion}" 
+    
+
+}
+
+configurations {
+    testOutput
+}
+
+dependencies {
+    testOutput sourceSets.test.output
+}
+
+tasks.processResources.dependsOn(generateGitProperties)
+
+gitProperties {
+    gitPropertiesResourceDir = file("${sourceSets.main.resources.srcDirs[0]}/com/karakun/shared/util")
+    keys = ['git.commit.id', 'git.commit.time']
+    dateFormat = "yyyyMMdd"
+    customProperty 'project.version', { project.version }
+}
+

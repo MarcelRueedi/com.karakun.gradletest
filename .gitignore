@@ -1,0 +1,21 @@
+/.gradle/
+/.idea/
+*.iml
+build
+
+/.metadata/
+*.ipr
+*.iws
+
+# Output directories
+target
+bin
+
+**/.settings/org.eclipse.buildship.core.prefs
+**/.settings/org.sonarlint.eclipse.core.prefs
+.DS_Store
+
+out/
+/build/
+/workspace/
+
